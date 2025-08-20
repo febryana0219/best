@@ -1,0 +1,75 @@
+/*========================================*/
+/*----------- [_Scroll_To_Top] -----------*/
+/*========================================*/
+.anim-scroll-to-top {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	box-shadow: inset  0 0 0 2px rgba(var(--primary-color-rgb),0.2);
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	@include transform(translateY(15px));
+	@include transition(all 300ms ease-out 0s);
+	&::after {
+		position: absolute;
+		content: "\e913";
+		font-family: 'webexbaseicon';
+		font-weight: 600;
+		text-align: center;
+		line-height: 45px;
+		font-size: 18px;
+		color: var(--primary-color);
+		left: 0;
+		top: 0;
+		height: 45px;
+		width: 45px;
+		cursor: pointer;
+		display: block;
+		z-index: 1;
+		@include transition(all 300ms ease-out 0s);
+	}
+	&.active-progress {
+		opacity: 1;
+		visibility: visible;
+		@include transform(translateY(0));
+	}
+	svg {
+		path {
+			fill: none;
+		}
+		&.progress-circle {
+			path {
+				stroke: var(--primary-color);
+				stroke-width: 4;
+				box-sizing:border-box;
+			}
+		}
+	}
+}
+
+// Back-To-Top
+// .back-to-top {
+// 	position: fixed;
+// 	right: 36px;
+// 	bottom: 42px;
+// 	width: 42px;
+// 	height: 42px;
+// 	color: var(--text-white);
+// 	text-align: center;
+// 	line-height: 40px;
+// 	border-radius: 50%;
+// 	z-index: 99;
+// 	font-size: 22px;
+// 	cursor: pointer;
+// 	background-color: var(--primary-color);
+// 	-webkit-animation: white-shadow .8s infinite, red-shadow .8s infinite;
+// 	animation: white-shadow .8s infinite, red-shadow .8s infinite;
+// 	@include box-shadow(0 10px 33px rgba(0, 0, 0, 0.1));
+// 	display: none;
+// }

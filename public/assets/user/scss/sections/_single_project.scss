@@ -1,0 +1,43 @@
+/*=================================================*/
+/*---------- [_Section_Single_Project] ------------*/
+/*=================================================*/
+.project-sidebar-widget {
+	.project-sidebar {
+		padding: 40px 45px 40px 45px;
+		margin-bottom: 38px;
+		background: #252531;
+		.project-info-list {
+			display: flex;
+			justify-content: space-evenly;
+			@media screen and (max-width: 425px){
+				display: inline-block;
+			}
+			li {
+				color: var(--text-light-gray);
+				@media screen and (max-width: 425px){
+					display: block;
+					margin-bottom: 15px;
+				}
+				.title {
+					color: var(--primary-color);
+					display: block;
+					font-weight: 800;
+					font-family: var(--heading-font);
+					i {
+						color: var(--primary-color);
+						font-size: 18px;
+						margin-right: 10px;
+						display: none;
+					}
+				}
+				a {
+					color: var(--text-light-gray);
+				}
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+

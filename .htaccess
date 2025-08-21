@@ -6,6 +6,10 @@
     RewriteEngine On
     RewriteBase /
 
+    # === Biarkan folder assets bisa diakses langsung ===
+    RewriteCond %{REQUEST_URI} ^/assets/ [NC]
+    RewriteRule ^ - [L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

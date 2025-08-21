@@ -112,11 +112,11 @@
                         <div data-i18n="Basic">Category</div>
                     </a>
                 </li>
-                <li class="menu-item{{ $activeMenu == 'qc.project' ? ' active' : '' }}">
+                {{-- <li class="menu-item{{ $activeMenu == 'qc.project' ? ' active' : '' }}">
                     <a href="{{ route('admin.qc.project.index') }}" class="menu-link">
                         <div data-i18n="Basic">Project</div>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </li>
 

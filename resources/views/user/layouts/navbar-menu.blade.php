@@ -58,9 +58,9 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="{{ $activeMenu == 'project' ? 'current' : '' }}">
+                {{-- <li class="{{ $activeMenu == 'project' ? 'current' : '' }}">
                     <a href="{{ route('projects.index') }}">Project</a>
-                </li>
+                </li> --}}
                 <li class="{{ $activeMenu == 'news' ? 'current' : '' }}">
                     <a href="{{ route('news.index') }}">News</a>
                 </li>

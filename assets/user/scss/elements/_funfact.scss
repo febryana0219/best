@@ -1,0 +1,71 @@
+/*========================================*/
+/*-------------- [_Funfact] --------------*/
+/*========================================*/
+.rotate-text {
+	position: absolute;
+	transform: rotate(90deg);
+	top: 168px;
+	left: -154px;
+	background: var(--primary-color);
+	color: var(--text-white);
+	padding: 12px 76px;
+	font-size: 22px;
+	@media screen and (max-width: 1199px){
+		display: none;
+	}
+}
+.funfact {
+	padding: 50px 30px;
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	@media screen and (max-width: 425px){
+		padding: 15px;
+		flex-direction: column;
+		text-align: center;
+	}
+	.funfact-icon {
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 15px;
+		text-align: center;
+		font-size: 8rem;
+		opacity: 0.07;
+		color: var(--primary-color);
+		@include transition(all 500ms ease-out 0s);
+		&::before {
+			color: var(--text-white);
+			font-size: 4.5rem;
+			opacity: 0.06;
+		}
+	}
+	.count-box {
+		.count-text {
+			font-size: 58px;
+			-webkit-text-fill-color: #e092653d;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: var(--primary-color);
+		}
+	}
+	.title {
+		font-size: 22px;
+		margin-left: 20px;
+		line-height: 28px;
+		max-width: 130px;
+		@media screen and (max-width: 425px){
+			margin-top: 15px;
+			margin-left: 0;
+			line-height: 30px;
+			width: 100%;
+		}
+	}
+	&:hover {
+		.funfact-icon {
+			animation: pulse 1s infinite;
+		}
+	}
+}

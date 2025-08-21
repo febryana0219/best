@@ -324,7 +324,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 // User route
 Route::get('/', [UserHomeController::class, 'index'])->name('home.index');
-Route::get('/home', [UserHomeController::class, 'index'])->name('home.index');
+Route::get('/home', [UserHomeController::class, 'index'])->name('home');
 Route::get('/contact', [UserContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [UserContactController::class, 'store'])->name('contact.store');
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Ricwil Indonesia" />
+    <meta name="author" content="PT. Best Insulation Indonesia" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Project Details</title>

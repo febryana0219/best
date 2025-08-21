@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ricwil Indonesia - {{ $metaTitle }}</title>
+    <title>PT. Best Insulation Indonesia - {{ $metaTitle }}</title>
     <link rel="icon" type="image/x-icon" href="{{ URL::asset('assets/admin/img/favicon/favicon.ico') }}" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ !empty($metaDescription) ? $metaDescription : '' }}">
     <meta name="keywords" content="{{ !empty($metaKeyword) ? $metaKeyword : '' }}">
-    <meta name="author" content="Ricwil Indonesia" />
+    <meta name="author" content="PT. Best Insulation Indonesia" />
 
     @include('user.layouts.head')
 </head>

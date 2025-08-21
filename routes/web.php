@@ -23,8 +23,6 @@ use App\Http\Controllers\Admin\{
     ProjectImageController,
     QualityControlDetailController,
     QualityControlDetailImageController,
-    DewPointCalculatorController,
-    DewPointCalculatorRequestorController,
     QualityControlImageRenameController,
     ClientWorkedController,
     BgController
@@ -33,7 +31,6 @@ use App\Http\Controllers\Admin\{
 use App\Http\Controllers\User\{
     UserHomeController,
     UserContactController,
-    UserDewPointCalculatorController,
     UserNewsletterController,
     UserAboutController,
     UserNewsController,
@@ -306,17 +303,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
             });
         });
 
-        // Thecnical
-        Route::prefix('technical')->name('technical.')->group(function () {
-            Route::prefix('dew_point_calculator')->name('dew_point_calculator.')->group(function () {
-                Route::get('/', [DewPointCalculatorController::class, 'index'])->name('index');
-                Route::get('/{id}/edit', [DewPointCalculatorController::class, 'edit'])->name('edit');
-                Route::put('/{id}', [DewPointCalculatorController::class, 'update'])->name('update');
-            });
-
-            Route::get('/dew_point_requestor', [DewPointCalculatorRequestorController::class, 'index'])->name('dew_point_requestor.index');
-        });
-
         Route::get('/rename-quality-control-images', [QualityControlImageRenameController::class, 'renameImages'])->name('renameImages.index');
 
     });
@@ -327,12 +313,6 @@ Route::get('/', [UserHomeController::class, 'index'])->name('home.index');
 Route::get('/home', [UserHomeController::class, 'index'])->name('home');
 Route::get('/contact', [UserContactController::class, 'index'])->name('contact.index');
 Route::post('/contact', [UserContactController::class, 'store'])->name('contact.store');
-
-// Technical specifications routes
-Route::any('/dewpoint-calculator', [UserDewPointCalculatorController::class, 'index'])->name('dewpoint.index');
-Route::any('/dewpoint-calculator/auth', [UserDewPointCalculatorController::class, '_auth'])->name('dewpoint.auth');
-Route::any('/dewpoint-calculator/min-pu-thickness-calculation-by-param', [UserDewPointCalculatorController::class, 'min_pu_thickness_calculation_by_param'])->name('dewpoint.min_pu_thickness_calculation_by_param');
-Route::post('/dewpoint/print', [UserDewPointCalculatorController::class, 'printPDF'])->name('dewpoint.print');
 
 Route::post('/newsletter/subscribe', [UserNewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
 

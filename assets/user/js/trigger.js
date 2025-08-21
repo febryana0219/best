@@ -194,7 +194,7 @@
   });
 
   /*========= [_Nice_select] =========*/
-  $('select').niceSelect();
+//   $('select').niceSelect();
 
   /*========= [_Accordion] =========*/
   $('.accordion-header').on('click', function(e) {

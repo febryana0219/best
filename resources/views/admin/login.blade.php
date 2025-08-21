@@ -62,7 +62,7 @@
             <div class="app-brand justify-content-center mt-5 text-center">
               <a href="{{ url('index') }}" class="app-brand-link gap-3 d-block">
                 <span class="app-brand-logo demo d-block">
-                  <img src="{{ URL::asset('assets/admin/img/logo/best_v0.png') }}" alt height="80" class="mx-auto d-block" />
+                  <img src="{{ asset('assets/admin/img/logo/best_v0.png') }}" alt height="80" class="mx-auto d-block" />
                 </span>
                 <span style="font-family: 'Arial Black', sans-serif; font-size: 16px; color: #000000; display:block; margin-top:8px;">
                   PT. BEST INSULATION INDONESIA

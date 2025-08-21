@@ -1,0 +1,139 @@
+/*========================================*/
+/*---------- [_Working_Process] ----------*/
+/*========================================*/
+.working-process-wrapper {
+  position: relative;
+  counter-reset: my-sec-counter1;
+  .working-process-shape {
+    position: absolute;
+    top: -50px;
+    left: 215px;
+    opacity: 0.1;
+    @media only screen and (min-width: 1200px) and (max-width: 1399px){
+      left: 165px;
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1199px){
+      left: 45px;
+    }
+    @media screen and (max-width: 991px){
+      display: none;
+    }
+  }
+  .process-item {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 0 40px 0;
+    @media only screen and (min-width: 992px) and (max-width: 1199px){
+      padding: 0 10px 0;
+    }
+    .process-icon-box {
+      position: relative;
+      display: block;
+      height: 150px;
+      width: 150px;
+      margin: 0 auto;
+      .process-icon {
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: #353542;
+        box-shadow: 0px 0px 57px 0px rgba(0, 0, 0, 0.1);
+        height: 148px;
+        width: 148px;
+        line-height: 148px;
+        margin: 0 auto;
+        z-index: 1;
+        border-radius: 50%;
+        span {
+          &:before {
+            font-size: 64px;
+            color: var(--primary-color);
+          }
+        }
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: "";
+          background-color: var(--primary-color);
+          transform-origin: center;
+          transform-style: preserve-3d;
+          @include transition(all 0.3s cubic-bezier(0.54, 0.33, 0.78, 0.84));
+          @include transform(scale(0));
+          z-index: -1;
+          border-radius: 50%;
+        }
+      }
+      .process-count {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 40px;
+        width: 40px;
+        background-color: var(--primary-color);
+        z-index: 2;
+        border-radius: 50%;
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color: var(--text-white);
+          font-size: 14px;
+          line-height: 40px;
+          counter-increment: my-sec-counter1;
+          content: counters(my-sec-counter1,".",decimal-leading-zero);
+          @include transition(all 200ms linear);
+          transition-delay: 0.1s;
+          border-radius: 50%;
+        }
+      }
+    }
+    .process-details {
+      position: relative;
+      display: block;
+      margin-top: 21px;
+      .process-title {
+        margin-bottom: 10px;
+        color: var(--text-white);
+      }
+      .process-text {
+        color: var(--text-white);
+        margin-bottom: 0;
+      }
+    }
+    &:hover {
+      .process-icon-box {
+        .process-icon {
+          span {
+            &:before {
+              color: var(--text-white);
+            }
+          }
+          &:before {
+            transform: scale(1.05);
+          }
+        }
+        .process-count {
+          &:before {
+            background-color: var(--bg-white);
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row mrb-80">
             <div class="col-md-12 col-lg-12 col-xl-4">
-                <h5 class="side-line-left text-primary-color mrt-0 mrb-5">pt_best_logo.pnguch</h5>
+                <h5 class="side-line-left text-primary-color mrt-0 mrb-5">Get In Touch</h5>
                 <h2 class="faq-title mrb-30">Have Any Questions?</h2>
                 <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
                     @foreach ($spSocialLink as $sl)

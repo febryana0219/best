@@ -32,11 +32,15 @@
                     @foreach ($news as $row)
                         <div class="col-md-6 col-lg-6 col-xl-4">
                             <div class="news-wrapper mrb-30">
-                                <div class="news-thumb">
+                                <div style="width: 100%; height: 250px; overflow: hidden; border-radius: 5px;">
                                     @if ($row->img)
-                                        <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/news/' . $row->img) }}" alt="{{ $row->title }}">
+                                        <img loading="lazy" class="img-full news-img"
+                                            src="{{ asset('storage/uploads/news/' . $row->img) }}"
+                                            alt="{{ $row->title }}">
                                     @else
-                                        <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/default/default.jpg') }}" alt="{{ $row->title }}">
+                                        <img loading="lazy" class="img-full news-img"
+                                            src="{{ asset('storage/uploads/default/default.jpg') }}"
+                                            alt="{{ $row->title }}">
                                     @endif
                                 </div>
                                 <div class="news-description">

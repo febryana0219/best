@@ -44,66 +44,55 @@
             </div>
         </div>
     </div>
+    @php
+    $icons = [
+        'maxwell-flex' => 'webextheme-icon-square-shape-design-interface-tool-symbol',
+        'maxwell-glue' => 'webextheme-icon-wallpaper',
+        'best-grilee' => 'webextheme-icon-kitchen',
+    ];
+    @endphp
+
     <div class="section-content">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="service-style2">
-                        <div class="service-item-thumb">
-                            <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/product/mid-temp-hi-gard.jpg') }}" alt="" />
-                            <div class="service-item-icon">
-                                <i class="webextheme-icon-013-sketch1"></i>
-                            </div>
-                            <div class="service-item-content">
-                                <h6 class="service-categories">HI-GARD</h6>
-                                <h4 class="service-title"><a href="{{ route('products.category', ['category_permalink' =>'hi-gard']) }}">Low, Mid, High Temperature</a></h4>
-                                <div class="service-item-inner-icon">
-                                    <i class="webextheme-icon-013-sketch1"></i>
+                @foreach($products as $product)
+                    @php
+                        $iconClass = $icons[$product->category->permalink] ?? 'webextheme-icon-003-renovation1';
+                    @endphp
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="service-style2">
+                            <div class="service-item-thumb">
+                                <img loading="lazy" class="img-full"
+                                    src="{{ $product->defaultImage() ? asset('storage/uploads/product/'.$product->defaultImage()->img) : asset('storage/uploads/default/default.jpg') }}"
+                                    alt="{{ $product->name }}" />
+                                <div class="service-item-icon">
+                                    <i class="{{ $iconClass }}"></i>
+                                </div>
+                                <div class="service-item-content">
+                                    <h6 class="service-categories">{{ $product->category->name ?? '-' }}</h6>
+                                    <h4 class="service-title">
+                                        <a href="{{ route('products.category', ['category_permalink' => $product->category->permalink]) }}">
+                                            {{ $product->name }}
+                                        </a>
+                                    </h4>
+                                    <div class="service-item-inner-icon">
+                                        <i class="{{ $iconClass }}"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="service-style2">
-                        <div class="service-item-thumb">
-                            <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/product/carrier-pipe.jpg') }}" alt="" />
-                            <div class="service-item-icon">
-                                <i class="webextheme-icon-under-construction-1"></i>
-                            </div>
-                            <div class="service-item-content">
-                                <h6 class="service-categories">TERRA-GARD</h6>
-                                <h4 class="service-title"><a href="{{ route('products.category', ['category_permalink' =>'terra-gard']) }}">Piping System</a></h4>
-                                <div class="service-item-inner-icon">
-                                    <i class="webextheme-icon-under-construction-1"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-4">
-                    <div class="service-style2">
-                        <div class="service-item-thumb">
-                            <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/product/tunnel-ventilation-damper-3.png') }}" alt="" />
-                            <div class="service-item-icon">
-                                <i class="webextheme-icon-003-renovation1"></i>
-                            </div>
-                            <div class="service-item-content">
-                                <h6 class="service-categories">DAMPER</h6>
-                                <h4 class="service-title"><a href="{{ route('products.category', ['category_permalink' =>'damper']) }}">Tunnel Ventilation</a></h4>
-                                <div class="service-item-inner-icon">
-                                    <i class="webextheme-icon-003-renovation1"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
             <div class="row mrt-35">
                 <div class="col-xl-12 text-center">
                     <div class="service-load-more">
                         <h5 class="text">
-                            Do You Want To explore more producs just <span><a href="{{ route('products.index') }}" class="text-underline text-primary-color">click here</a></span>
+                            Do You Want To explore more products just
+                            <span>
+                                <a href="{{ route('products.index') }}" class="text-underline text-primary-color">click here</a>
+                            </span>
                         </h5>
                     </div>
                 </div>

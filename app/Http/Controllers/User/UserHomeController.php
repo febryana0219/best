@@ -10,6 +10,8 @@ use App\Models\Admin\AboutModel;
 use App\Models\Admin\ContentModel;
 use App\Models\Admin\QualityControlModel;
 use App\Models\Admin\NewsModel;
+use App\Models\Admin\CategoryModel;
+use App\Models\Admin\ProductModel;
 
 class UserHomeController extends Controller
 {
@@ -41,6 +43,12 @@ class UserHomeController extends Controller
             ->orderBy('id', 'desc')
             ->limit(6)
             ->get();
+        $categories = CategoryModel::select('id','name','permalink')
+            ->orderBy('order_id','asc')
+            ->get();
+        $products = ProductModel::with(['category', 'images'])
+            ->orderBy('id', 'desc')
+            ->get();
 
         $metaTitle = $metaData['home_meta_title'] ?? null;
         $metaKeyword = $metaData['home_meta_keyword'] ?? null;
@@ -58,6 +66,8 @@ class UserHomeController extends Controller
             'news' => $news,
             'metaKeyword' => $metaKeyword,
             'metaDescription' => $metaDescription,
+            'categories' => $categories,
+            'products' => $products,
         ]);
     }
 }

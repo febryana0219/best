@@ -161,289 +161,86 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 col-xl-6 bg-cover" data-background="{{ asset('assets/user/images/bg/pipe-installation.jpg') }}"></div>
-            <div class="col-lg-12 col-xl-6 p-0">
-                <div class="divider-gap bg-silver">
-                    <h2 class="mrb-25">Why You Choose Us?</h2>
-                    <p class="mrb-40 mrb-sm-60">At PT. Best Insulation Indonesia, we're more than just builders — we're partners in bringing your vision to life. Here's why clients trust us.</p>
-                    <div class="icon-box-two mrb-30">
-                        <div class="icon bg-primary-color f-left">
-                            <span class="webexflaticon webextheme-icon-architect-2"></span>
+            <!-- Kolom Konten -->
+            <div class="col-lg-12 col-xl-8 p-0">
+                <div class="divider-gap bg-silver p-4">
+                    <h2 class="mrb-25 text-center">Why choose our products ?</h2>
+
+                    <div class="row">
+                        <!-- Kolom kiri -->
+                        <div class="col-md-6">
+                            <div class="mrb-30 d-flex">
+                                <div class="mrr-20">
+                                    <img src="{{ asset('assets/user/images/suhu.png') }}" style="height: auto; width: 40px; max-width: none; display: block;">
+                                </div>
+                                <div class="icon-details">
+                                    <h4 class="icon-box-title mrb-10">Wide Temperature Resistance</h4>
+                                    <p>Engineered to withstand extreme hot and cold conditions without losing performance.</p>
+                                </div>
+                            </div>
+
+                            <div class="mrb-30 d-flex">
+                                <div class="mrr-20">
+                                    <img src="{{ asset('assets/user/images/guard.png') }}" style="height: auto; width: 40px; max-width: none; display: block;">
+                                </div>
+                                <div class="icon-details">
+                                    <h4 class="icon-box-title mrb-10">Durable & Long - Lasting</h4>
+                                    <p>Crafted from premium materials for outstanding durability and long term reliability.</p>
+                                </div>
+                            </div>
+
+                            <div class="mrb-30 d-flex">
+                                <div class="mrr-20">
+                                    <img src="{{ asset('assets/user/images/chart.png') }}" style="height: auto; width: 40px; max-width: none; display: block;">
+                                </div>
+                                <div class="icon-details">
+                                    <h4 class="icon-box-title mrb-10">Superior Insulation Performance</h4>
+                                    <p>Delivers excellent insulation for maximum energy efficiency and comfort.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="icon-details">
-                            <h4 class="icon-box-title mrb-10">Expertise You Can Trust</h4>
-                            <p>With 20+ years of industry experience, we deliver precision, quality, and attention to detail in every project</p>
+
+                        <!-- Kolom kanan -->
+                        <div class="col-md-6">
+                            <div class="mrb-30 d-flex">
+                                <div class="mrr-20">
+                                    <img src="{{ asset('assets/user/images/tools.png') }}" style="height: auto; width: 40px; max-width: none; display: block;">
+                                </div>
+                                <div class="icon-details">
+                                    <h4 class="icon-box-title mrb-10">Easy to Install</h4>
+                                    <p>Designed for quick, hassle-free installation with minimal effort.</p>
+                                </div>
+                            </div>
+
+                            <div class="mrb-30 d-flex">
+                                <div class="mrr-20">
+                                    <img src="{{ asset('assets/user/images/ceklis.png') }}" style="height: auto; width: 40px; max-width: none; display: block;">
+                                </div>
+                                <div class="icon-details">
+                                    <h4 class="icon-box-title mrb-10">Versatile Options Available in Class 0 and Class 1</h4>
+                                    <p>Offered in flexible options that meet Class 0 and Class 1 Standards for diverse applications</p>
+                                </div>
+                            </div>
+
+                            <div class="mrb-30 d-flex">
+                                <div class="mrr-20">
+                                    <img src="{{ asset('assets/user/images/suhu_air.png') }}" style="height: auto; width: 40px; max-width: none; display: block;">
+                                </div>
+                                <div class="icon-details">
+                                    <h4 class="icon-box-title mrb-10">Moisture Protection</h4>
+                                    <p>Effectively resists moisture to prevent damage and extend product lifespan</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="icon-box-two mrb-30">
-                        <div class="icon bg-primary-color f-left">
-                            <span class="webexflaticon webextheme-icon-architect-4"></span>
-                        </div>
-                        <div class="icon-details">
-                            <h4 class="icon-box-title mrb-10">On-Time, On-Budget Delivery</h4>
-                            <p>Our commitment to efficiency ensures your project is completed on schedule and within budget, without compromising quality</p>
-                        </div>
-                    </div>
-                    <div class="icon-box-two mrb-30">
-                        <div class="icon bg-primary-color f-left">
-                            <span class="webexflaticon webextheme-icon-interior"></span>
-                        </div>
-                        <div class="icon-details">
-                            <h4 class="icon-box-title mrb-10">Safety and Sustainability</h4>
-                            <p>We prioritize the safety of our team and the environment by adhering to the highest standards in sustainable construction</p>
-                        </div>
-                    </div>
-                    <div class="icon-box-two">
-                        <div class="icon bg-primary-color f-left">
-                            <span class="webexflaticon webextheme-icon-team-1"></span>
-                        </div>
-                        <div class="icon-details">
-                            <h4 class="icon-box-title mrb-10">Customer-Centric Approach</h4>
-                            <p>Your satisfaction is our priority. We listen, collaborate, and tailor our services to meet your unique needs</p>
-                        </div>
-                    </div>
+                    </div> <!-- row -->
                 </div>
             </div>
+            <!-- Kolom Gambar -->
+            <div class="col-lg-12 col-xl-4 bg-cover" data-background="{{ asset('assets/user/images/bg/bg1.png') }}"></div>
         </div>
     </div>
 </section>
 <!-- why Choose Us Section End -->
-
-<!-- Working Steps Section Start -->
-<section class="working-process-section bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-150 pdb-115" data-background="{{ asset('assets/user/images/bg/abs-bg4.png') }}" data-overlay-dark="2">
-<div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-    <div class="container">
-    <div class="row">
-        <div class="col"></div>
-            <div class="col-md-12 col-lg-10 col-xl-6">
-                <div class="title-box">
-                    <h5 class="text-primary-color mrb-10">How We Works</h5>
-                    <h2 class="text-white mrb-10">Our Easy Working Steps</h2>
-                    <div class="big-text">Working</div>
-                </div>
-            </div>
-            <div class="col"></div>
-        </div>
-    </div>
-</div>
-<div class="section-content">
-    <div class="container">
-        <div class="working-process-wrapper">
-            <div class="working-process-shape">
-                <img loading="lazy" src="{{ asset('assets/user/images/bg/working-process-shape.png') }}" alt="" />
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="process-item mrb-md-40">
-                        <div class="process-icon-box">
-                            <div class="process-icon">
-                                <span class="webexflaticon webextheme-icon-office-1"></span>
-                            </div>
-                            <div class="process-count"></div>
-                        </div>
-                        <div class="process-details">
-                            <h4 class="process-title">Visit Project</h4>
-                            <p class="process-text">Understand your needs, and evaluate possibilities, ensuring delivering tailored construction solutions</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="process-item mrb-md-40">
-                        <div class="process-icon-box">
-                            <div class="process-icon">
-                                <span class="webexflaticon webextheme-icon-architect-1"></span>
-                            </div>
-                            <div class="process-count"></div>
-                        </div>
-                        <div class="process-details">
-                            <h4 class="process-title">Planning Design</h4>
-                            <p class="process-text">Gather key details, understand your vision, and integrate them into the planning and design process</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="process-item mrb-md-40">
-                        <div class="process-icon-box">
-                            <div class="process-icon">
-                                <span class="webexflaticon webextheme-icon-measure"></span>
-                            </div>
-                            <div class="process-count"></div>
-                        </div>
-                        <div class="process-details">
-                            <h4 class="process-title">Project Sketch</h4>
-                            <p class="process-text">We gather essential information to create accurate project sketches that align with your vision</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6">
-                    <div class="process-item mrb-md-40 mrb-sm-0">
-                        <div class="process-icon-box">
-                            <div class="process-icon">
-                                <span class="webexflaticon webextheme-icon-interior"></span>
-                            </div>
-                            <div class="process-count"></div>
-                        </div>
-                        <div class="process-details">
-                            <h4 class="process-title">Start Working</h4>
-                            <p class="process-text">Bringing your vision to life with precision, quality, and timely execution</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-<!-- Working Steps Section End -->
-
-<!-- Clients Worked Section Start -->
-<section class="clients-worked-section pdt-105 pdb-105" data-background="{{ asset('assets/user/images/bg/abs-bg6.png') }}">
-    <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <div class="title-box-center">
-                    <h5 class="sub-title-line-bottom text-primary-color mrb-10">Client's</h5>
-                    <h2 class="title">Who We've <span class="text-primary-color">Worked</span> With</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="clients-carousel owl-carousel owl-theme">
-            @foreach ($clients as $client)
-                <div class="client-item">
-                    <img loading="lazy" src="{{ asset('storage/uploads/client_worked/' . $client->img) }}" alt="{{ $client->name }}" style="width: 191px; margin-right: 30px;">
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
-<!-- Clients Worked Section End -->
-
-<!-- Project Section Start -->
-<section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105" data-background="{{ asset('assets/user/images/bg/abs-bg3.png') }}" data-overlay-dark="4">
-    <div class="section-title mrb-60 mrb-md-15 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-8 col-lg-7 col-md-12">
-                    <div class="title-box-center">
-                        <h5 class="side-line-left text-primary-color mrb-10">Our Projects</h5>
-                        <h2 class="text-white mrb-md-40 mrb-sm-30">
-                            Our Outstanding <br />
-                            <span class="text-primary-color">Latest Proejcts</span> & Works
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5 pdt-50 col-md-12 text-lg-end">
-                    {{-- <a href="{{ route('projects.index') }}" class="animate-btn-style2" style="color: #fff;">All Projects</a> --}}
-                    <p class="text-white mrb-0 mrb-md-40 body-font-size">Here are some of our most recent and remarkable projects that showcase our expertise, innovation, and commitment to quality</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="project-item-style1-wrapper mrr--300">
-                        <div class="owl-carousel projects_5col">
-                            @foreach ($projects as $project)
-                                <div class="project-item-style1">
-                                    <div class="project-item-thumb">
-                                        @if ($project->image)
-                                            <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/quality_control/' . $project->image)}}" alt="{{ $project->name}}" />
-                                        @else
-                                            <img loading="lazy" class="img-full" src="{{ asset('storage/uploads/default/default.jpg') }}" alt="{{ $project->name }}">
-                                        @endif
-                                        <div class="project-item-link-icon">
-                                            {{-- <a href="#" data-toggle="modal" data-target="#passwordModal"
-                                               data-permalink="{{ $project->permalink }}"
-                                               data-password="{{ $project->password_access }}">
-                                                <i class="base-icon-next"></i>
-                                            </a> --}}
-                                            <a href="{{ route('projects.detail', $project->permalink) }}"><i class="base-icon-next"></i></a>
-                                        </div>
-                                        <div class="project-item-details">
-                                            <h6 class="project-item-category">{{ $project->category->name }}</h6>
-                                            <h4 class="project-item-title"><a href="{{ route('projects.detail', $project->permalink) }}">{{ $project->name }}</a></h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Project Section End -->
-
-<!-- Funfact Section Start -->
-<section class="funfact-section pdt-50 pdb-25 pdt-sm-80 pdb-sm-65">
-    <div class="funfact-section-obj1">
-        <img loading="lazy" src="{{ asset('assets/user/images/objects/funfact-obj1.png') }}" alt="" />
-    </div>
-    <div class="funfact-section-obj2">
-        <img loading="lazy" src="{{ asset('assets/user/images/objects/funfact-obj2.png') }}" alt="" />
-    </div>
-    <div class="funfact-section-obj3">
-        <img loading="lazy" src="{{ asset('assets/user/images/objects/funfact-obj3.png') }}" alt="" />
-    </div>
-    <div class="section-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-                    <div class="funfact">
-                        <div class="funfact-icon">
-                            <span class="webexflaticon base-icon-162-briefcase-2"></span>
-                        </div>
-                        <h2 class="count-box">
-                            <span data-stop="864" data-speed="2500" class="count-text">00</span>
-                        </h2>
-                        <h5 class="title">Projects Succeed</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-                    <div class="funfact">
-                        <div class="funfact-icon">
-                            <span class="webexflaticon base-icon-101-like-1"></span>
-                        </div>
-                        <h2 class="count-box">
-                            <span data-stop="3450" data-speed="2500" class="count-text">00</span>
-                        </h2>
-                        <h5 class="title">Satisfied Clients</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-                    <div class="funfact">
-                        <div class="funfact-icon">
-                            <span class="webexflaticon webextheme-icon-architect-4"></span>
-                        </div>
-                        <h2 class="count-box">
-                            <span data-stop="84" data-speed="2500" class="count-text">00</span>
-                        </h2>
-                        <h5 class="title">Professional Engineers</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms">
-                    <div class="funfact">
-                        <div class="funfact-icon">
-                            <span class="webexflaticon base-icon-037-creativity"></span>
-                        </div>
-                        <h2 class="count-box">
-                            <span data-stop="20" data-speed="2500" class="count-text">00</span>
-                        </h2>
-                        <h5 class="title">Year Of Experience</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Funfact Section End -->
 
 <!-- News Section Start -->
 <section class="bg-no-repeat bg-cover bg-pos-ct pdt-105" data-background="{{ asset('assets/user/images/bg/abs-bg1.png') }}">

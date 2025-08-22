@@ -61,7 +61,7 @@
                     @endphp
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="service-style2">
-                            <div class="service-item-thumb">
+                            <div class="service-item-thumb" style="width: 100%; height: 300px; overflow: hidden; border-radius: 5px;">
                                 <img loading="lazy" class="img-full"
                                     src="{{ $product->defaultImage() ? asset('storage/uploads/product/'.$product->defaultImage()->img) : asset('storage/uploads/default/default.jpg') }}"
                                     alt="{{ $product->name }}" />

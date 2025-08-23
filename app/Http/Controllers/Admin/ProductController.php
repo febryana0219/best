@@ -38,7 +38,7 @@ class ProductController extends Controller
             'subtitle' => 'nullable|string|max:60',
             'category_id' => 'required|exists:category,id',
             'publish' => 'required',
-            'description' => 'nullable|string',
+            'description' => 'required|string',
         ]);
 
         $permalink = str_replace(' ', '-', $request->name);
@@ -84,7 +84,7 @@ class ProductController extends Controller
             'subtitle' => 'nullable|string|max:60',
             'category_id' => 'required|exists:category,id',
             'publish' => 'required',
-            'description' => 'nullable|string',
+            'description' => 'required|string',
             'img' => 'nullable|file|max:10240|mimes:jpeg,jpg,png,gif',
         ]);
 

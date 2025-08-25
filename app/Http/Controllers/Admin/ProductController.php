@@ -102,24 +102,13 @@ class ProductController extends Controller
         if ($request->hasFile('img')) {
             $imgFile = $request->file('img');
 
-            $fileSize = $imgFile->getSize();
-            $fileSizeInKB = $fileSize / 1024;
-
             $imgCount = ProductImageModel::where('product_id', $product->id)->count();
 
             $formattedName = strtolower(str_replace(' ', '-', $product->name));
             $imageName = $formattedName . '-' . ($imgCount + 1) . '.' . $imgFile->getClientOriginalExtension();
 
-            $image = Image::make($imgFile)->resize(800, null, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-
-            if ($fileSizeInKB > 800) {
-                $image->save(storage_path("app/public/uploads/product/{$imageName}"), 90);
-            } else {
-                $image->save(storage_path("app/public/uploads/product/{$imageName}"));
-            }
+            // Simpan langsung tanpa resize/kompres
+            $imgFile->storeAs('public/uploads/product', $imageName);
 
             ProductImageModel::create([
                 'product_id' => $product->id,

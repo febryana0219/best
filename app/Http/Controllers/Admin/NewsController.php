@@ -40,17 +40,11 @@ class NewsController extends Controller
         if ($request->hasFile('img')) {
             $imgFile = $request->file('img');
 
-            $image = Image::make($imgFile)->resize(800, null, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-
+            $currentDateTime = now()->format('YmdHis');
             $imgFileName = 'NEWS-' . $currentDateTime . '.' . $imgFile->getClientOriginalExtension();
 
-            $fileSizeInKB = $imgFile->getSize() / 1024;
-            $compressionQuality = $fileSizeInKB > 300 ? 75 : 100;
-
-            $image->save(storage_path("app/public/uploads/news/{$imgFileName}"), $compressionQuality);
+            // simpan original tanpa resize & tanpa compress
+            $imgFile->storeAs('public/uploads/news', $imgFileName);
         }
 
         NewsModel::create([
@@ -90,22 +84,18 @@ class NewsController extends Controller
         if ($request->hasFile('img')) {
             $imgFile = $request->file('img');
 
-            $image = Image::make($imgFile)->resize(800, null, function ($constraint) {
-                $constraint->aspectRatio();
-                $constraint->upsize();
-            });
-
+            $currentDateTime = now()->format('YmdHis');
             $imgFileName = 'NEWS-' . $currentDateTime . '.' . $imgFile->getClientOriginalExtension();
 
-            $fileSizeInKB = $imgFile->getSize() / 1024;
-            $compressionQuality = $fileSizeInKB > 300 ? 75 : 100;
+            // simpan original tanpa resize & tanpa compress
+            $imgFile->storeAs('public/uploads/news', $imgFileName);
 
-            $image->save(storage_path("app/public/uploads/news/{$imgFileName}"), $compressionQuality);
-
+            // hapus gambar lama kalau ada
             if ($news->img && Storage::disk('public')->exists("uploads/news/{$news->img}")) {
                 Storage::disk('public')->delete("uploads/news/{$news->img}");
             }
 
+            // update field img
             $news->img = $imgFileName;
         }
 
